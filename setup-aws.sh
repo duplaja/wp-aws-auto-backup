@@ -40,8 +40,8 @@ echo "AWS Configured..."
 mkdir /var/other-scripts
 
 # Copy the two partial templates to the folder above
-cp backup-site.sh /var/other-scripts/backup-site.sh
-cp backuptemplate /var/other-scripts/backuptemplate
+cp templates/backup-site.sh /var/other-scripts/backup-site.sh
+cp templates/backuptemplate /var/other-scripts/backuptemplate
 
 # Start filling in the lines for the user-entered variables above
 echo "DOMAIN=\"$DOMAIN\"" >> /var/other-scripts/backup-site.sh
