@@ -52,4 +52,4 @@ printf "${MSG_COLOR}...done!${MSG_END}\n\n";
 
 ### COMPELTED MESSAGE
 printf "${MSG_COLOR_DONE}Backup complete!${MSG_END}\n\n";
-pkill -f backup-site.sh
+pkill -f backup-site.sh &>/dev/null
