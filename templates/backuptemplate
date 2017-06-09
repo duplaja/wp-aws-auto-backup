@@ -7,9 +7,6 @@ MSG_END='\033[0m'
 RUN_SLEEP="0.5"
 ###########################
 
-### OPENING LINE
-printf "${MSG_COLOR}\n"'%*s\n\n'"${MSG_END}" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -;
-
 ### CREATE TEMPORARY FOLDERS
 printf "${MSG_COLOR}Creating temporary folder...${MSG_END}";
 while true; do printf "${MSG_COLOR}.${MSG_END}"; sleep $RUN_SLEEP; done &
@@ -42,7 +39,7 @@ printf "${MSG_COLOR}...done!${MSG_END}\n\n";
 ### SYNC ARCHIVE TO S3
 printf "${MSG_COLOR}Uploading to Amazon S3...${MSG_END}";
 while true; do printf "${MSG_COLOR}.${MSG_END}"; sleep $RUN_SLEEP; done &
-/usr/local/bin/aws s3 mv $TEMP_DIR $S3_DIR --recursive --quiet
+aws s3 mv $TEMP_DIR $S3_DIR --recursive --quiet
 kill $!; trap 'kill $!' SIGTERM
 printf "${MSG_COLOR}...done!${MSG_END}\n\n";
 
