@@ -1,4 +1,4 @@
-# WP AWS Auto Config Backup Script
+# WP AWS Server Side Auto Config Backup Script
 Auto-config WordPress Backups via AWS S3. This is tested on Debian 8 x64 and Ubuntu 16.04 and later
 
 **Please verify that the backups are being created! This is BETA software.**
@@ -23,6 +23,12 @@ Auto-config WordPress Backups via AWS S3. This is tested on Debian 8 x64 and Ubu
     <Variables are: AWS_ID, AWS_SECRET, AWS_REGION, DOMAIN, SITE_DIR, S3_BUCKET_AND_SUBFOLDER>
     <ctrl + o to write out and save changes>
     sudo bash setup-aws.sh
+
+## What This Does
+
+* Installs and Configures AWS CLI
+* Compiles a Backup Script that builds a tar.gz backup of your files and database
+* Adds the backup script to a nightly cron at 1:05 am server time
 
 ## Useful Links
 
