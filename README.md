@@ -28,6 +28,7 @@ Auto-config WordPress Backups via AWS S3. This is tested on Debian 8 x64 and Ubu
 
 * Installs and Configures AWS CLI
 * Compiles a Backup Script that builds a tar.gz backup of your files and database
+* Uploads those backups to a subfolder in your S3 bucket with the domain name and date
 * Adds the backup script to a nightly cron at 1:05 am server time
 
 ## Useful Links
